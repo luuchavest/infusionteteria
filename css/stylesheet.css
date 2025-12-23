@@ -1,0 +1,619 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/*GENERAL*/
+
+html {
+    height: 100%;
+}
+
+body {
+background-color:rgb(73, 106, 75) ;
+min-height: 100%;
+}
+
+/*HEADER TODAS LAS PAGINAS*/
+
+.header-todos{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #9fc39f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    min-height: auto !important;
+    
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+
+}
+@media (min-width:992px){
+    .container-fluid {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 0;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+} 
+
+.navbar-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    margin-right:0;
+}
+
+@media (max-width:1400) {
+    .barra-navegacion{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+ 
+
+.navbar-toggler {
+    padding: 0;
+    filter: invert(1); 
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #9fc39f;
+        padding: 20px;
+        margin-top: 10px;
+
+    }
+    
+    .nav-link {
+        width: 100%;    
+        margin-bottom: 8px;
+    }
+}
+
+.nav-link {
+    background-color: #0e5b0e;
+    color: white !important;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    background-color: rgb(103, 213, 176);
+}
+
+.infusion {
+ color: white !important;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: bolder;
+ font-size: clamp (2rem, 5vw, 3.5 rem);
+ margin: 0px;
+ 
+
+}
+
+ 
+.teteria {
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14px;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-left: 5px;
+}
+
+
+
+/*FOOTER-TODAS*/
+.footer {
+    background-color: #9fc39f; 
+    padding: 20px 0 10px 0;    
+    color: #0e5b0e;            
+    border-top: 1px solid rgba(14, 91, 14, 0.1);
+    position: sticky;
+    
+}
+
+.logo-footer {
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    font-size: 18px;          
+    margin: 0;
+    line-height: 1;
+}
+
+.logo-footer span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: normal;
+}
+
+.info-item {
+    font-size: 12px;           
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+.info-item a {
+    color: #0e5b0e;
+    text-decoration: none;
+}
+
+.info-item strong {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+
+.footer-copyright {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(14, 91, 14, 0.05);
+    text-align: center;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-fino {
+        padding: 30px 0 15px 0;
+    }
+    .info-item {
+        margin-bottom: 5px;
+    }
+}
+
+
+/*INDEX*/
+
+.grid-container {
+display: grid;
+text-align: center;
+padding: 10px;
+gap: 10px;
+
+grid-template:
+"header" 70px
+"nav" 60px
+"main" auto
+"footer" 70px
+ }
+
+.header {
+    grid-area: header;
+    background-color: rgb(121, 159, 121);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(200, 254, 200);
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(106, 163, 106);
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(121, 159, 121);
+}
+
+/*Responsive TABLET*/
+
+@media (min-width:600px){
+    .grid-container {
+    grid-template:
+    "header nav" 50px
+    "main main" auto
+    "footer footer" 60px;
+    }
+}
+
+@media (min-width:900px) {
+    .grid-container {
+    grid-template:
+    "header header nav" 50px
+    "main main main" auto
+    "footer footer footer" 60px /
+    200px auto 200px ; 
+    }
+}
+
+
+
+
+
+header{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(152, 198, 152);
+
+}
+
+.titulo-principal {
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+
+.subtitulo {
+    font-size: medium;
+    font-weight: lighter;
+    color: white;
+}
+
+
+.titulos {
+    display: flex;
+}
+
+.barra-navegacion {
+    display: flex;
+    margin-left: 450px;
+    margin-top: 10px;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: nowrap;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(181, 246, 181);
+    width: 100%;
+
+}
+
+/*INDEX*/
+
+.grid-container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+}
+
+.bestsellers {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.galeria-inicio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; 
+    aspect-ratio: 1/1;
+}
+
+.galeria-inicio a img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 10;
+}
+.galeria-inicio a {
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+
+    .grid-container-inicio {
+       grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .galeria-inicio {
+        grid-template-columns: repeat(3, 1fr); 
+        max-width: 1200px; 
+        width: 100%;
+        gap: 30px;
+        aspect-ratio: auto; 
+    }
+
+    .bestsellers {
+        font-size: 40px; 
+        margin: 50px 0;
+    }
+
+.galeria-inicio img {
+    width: 100%; 
+    height: auto;
+    justify-items: center;
+}
+}
+
+/*SOBRE NOSOTROS*/
+
+.img-fluid {
+display: flex;
+width: 100px;
+opacity: .8;
+}
+
+
+.col-md-4  {
+    color: white;
+}
+
+.nosotros {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.historia {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: white;
+    font-size: 30px;
+}
+
+.parrafo-historia{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/*PRODUCTOS*/
+
+.mb-4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    font-weight: bolder;
+    font-size:40px ;
+}
+
+.card-producto {
+    display: flex;
+    background-color: #8db58d; 
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left; 
+}
+
+.imagen-producto {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.imagen-producto img {
+    border-radius: 12px;    
+    width: 100%;
+    height: auto;
+}
+.titulo-productos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    font-weight: bolder;
+    font-size:40px ;
+}
+
+.productos {
+    font-size: 35px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    align-items: start;
+}
+
+p {
+    color: #1a2a1a;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.comprar {
+   background-color: #e9ecef; 
+    color: black;
+    border: 1px solid black;
+    padding: 8px;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.comprar:hover{
+    background-color: rgb(215, 245, 173);
+}
+
+
+.card-img-top {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: rgb(131, 183, 142);
+    margin: 1%;
+    border-radius:10px;
+    width: 250px;
+    padding: 10%;
+
+}
+  
+.col-12 {
+    margin: 1%;
+    border-radius:10px;
+    padding: 10%;
+}
+
+
+/*NUESTROS SERVICIOS*/
+
+.grid-container{
+    display: grid;
+    justify-items: center;
+    width: 90%;
+    gap: 250px;
+    
+}
+
+.card-servicio {
+    display: grid;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    color: white;
+
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin: 20px 0;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; 
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: #8db58d;
+    
+}
+
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, min-content);
+        justify-content: center;
+        justify-items: center;
+        gap: 40px;
+        margin-top: 50px;
+        margin-bottom: 250px;
+
+    }
+
+      .card-servicio {
+        width: 250px;
+        align-items: center;
+        justify-items: center;
+        
+      }
+}
+
+
+/*CONTACT US*/
+.consulta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 50px; 
+    margin-bottom: 400px;
+}
+
+
+.consulta label {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+.consulta textarea {
+    width: 90%;          
+    max-width: 500px;   
+    height: 200px;       
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    font-family: Arial, sans-serif;
+    resize: none;       
+}
+
+.enviar {
+    background-color: #0e5b0e;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: #1a2a1a;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .consulta label {
+        font-size: 24px;
+    }
+
+    .consulta textarea {
+        max-width: 600px; 
+        height: 250px;
+    }
+}
