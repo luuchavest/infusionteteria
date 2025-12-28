@@ -1,3 +1,22 @@
+$primary-color: red; 
+
+body {
+    background-color: $primary-color;
+}
+
+header {
+    background-color: $primary-color;
+}
+
+@import "inicio";
+
+
+
+
+
+
+
+
 
 *{
     margin: 0%;
@@ -617,4 +636,3 @@ p {
         height: 250px;
     }
 }
-
