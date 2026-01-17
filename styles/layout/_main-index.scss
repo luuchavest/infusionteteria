@@ -1,0 +1,94 @@
+.grid-container {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+}
+
+.bestsellers {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.galeria-inicio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; 
+    aspect-ratio: 1/1;
+}
+
+.galeria-inicio a img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 10;
+}
+.galeria-inicio a {
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+
+    .grid-container-inicio {
+       grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .galeria-inicio {
+        grid-template-columns: repeat(3, 1fr); 
+        max-width: 1200px; 
+        width: 100%;
+        gap: 30px;
+        aspect-ratio: auto; 
+    }
+
+    .bestsellers {
+        font-size: 40px; 
+        margin: 50px 0;
+    }
+
+.galeria-inicio img {
+    width: 100%; 
+    height: auto;
+    justify-items: center;
+}
+}
+
+/*SOBRE NOSOTROS*/
+
+.img-fluid {
+display: flex;
+width: 100px;
+opacity: .8;
+}
+
+
+.col-md-4  {
+    color: white;
+}
+
+.nosotros {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.historia {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: white;
+    font-size: 30px;
+}
+
+

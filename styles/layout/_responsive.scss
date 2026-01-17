@@ -1,0 +1,215 @@
+/*Header*/
+
+
+@media (min-width:992px){
+    .container-fluid {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 0;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+} 
+
+
+@media (max-width:1400) {
+    .barra-navegacion{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+ 
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #9fc39f;
+        padding: 20px;
+        margin-top: 10px;
+
+    }
+    
+    .nav-link {
+        width: 100%;    
+        margin-bottom: 8px;
+    }
+}
+
+
+header{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(152, 198, 152);
+
+}
+
+.titulo-principal {
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+
+.subtitulo {
+    font-size: medium;
+    font-weight: lighter;
+    color: white;
+}
+
+
+.titulos {
+    display: flex;
+}
+
+.barra-navegacion {
+    display: flex;
+    margin-left: 450px;
+    margin-top: 10px;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: nowrap;
+    text-decoration: none;
+}
+
+
+
+/*FOOTER*/
+@media (max-width: 768px) {
+    .footer-fino {
+        padding: 30px 0 15px 0;
+    }
+    .info-item {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width:600px){
+    .grid-container {
+    grid-template:
+    "header nav" 50px
+    "main main" auto
+    "footer footer" 60px;
+    }
+}
+
+@media (min-width:900px) {
+    .grid-container {
+    grid-template:
+    "header header nav" 50px
+    "main main main" auto
+    "footer footer footer" 60px /
+    200px auto 200px ; 
+    }
+}
+
+
+
+
+/*INDEX*/
+
+.grid-container {
+display: grid;
+text-align: center;
+padding: 10px;
+gap: 10px;
+
+grid-template:
+"header" 70px
+"nav" 60px
+"main" auto
+"footer" 70px
+ }
+
+.header {
+    grid-area: header;
+    background-color: rgb(121, 159, 121);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(200, 254, 200);
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(106, 163, 106);
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(121, 159, 121);
+}
+
+
+/*Forms*/
+
+@media (min-width: 768px) {
+    .consulta label {
+        font-size: 24px;
+    }
+
+    .consulta textarea {
+        max-width: 600px; 
+        height: 250px;
+    }
+}
+
+
+/*cards*/
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, min-content);
+        justify-content: center;
+        justify-items: center;
+        gap: 40px;
+        margin-top: 50px;
+        margin-bottom: 250px;
+
+    }
+
+      .card-servicio {
+        width: 250px;
+        align-items: center;
+        justify-items: center;
+        
+      }
+}
+
+
+
+
+/*Responsive INDEX TABLET*/
+
+@media (min-width:600px){
+    .grid-container {
+    grid-template:
+    "header nav" 50px
+    "main main" auto
+    "footer footer" 60px;
+    }
+}
+
+@media (min-width:900px) {
+    .grid-container {
+    grid-template:
+    "header header nav" 50px
+    "main main main" auto
+    "footer footer footer" 60px /
+    200px auto 200px ; 
+    }
+}

@@ -1,0 +1,34 @@
+
+.navbar-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    margin-right:0;
+}
+
+
+.navbar-toggler {
+    padding: 0;
+    filter: invert(1); 
+}
+
+
+.nav-link {
+    background-color: #0e5b0e;
+    color: white !important;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    background-color: rgb(103, 213, 176);
+}

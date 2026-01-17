@@ -1,0 +1,14 @@
+@use "base/reset";
+@use "utilities/variables";
+
+@use "layout/header";
+@use "layout/footer";
+@use "layout/main-index";
+@use "layout/main-productos";
+@use "layout/main-sobrenos";
+@use "layout/navbar";
+@use "layout/responsive";
+
+@use "components/cards";
+@use "components/forms";
+@use "components/parrafos";
