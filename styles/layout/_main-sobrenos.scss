@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+
+
+.titulos {
+    font-family: $main-font;
+    color: $color-titulos;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgb(92, 137, 124);
+    
+    
+   .historia {
+    @include estilo-texto ($main-font, 30px);
+    text-transform: none;      
+        text-shadow: 2px 2px 4px rgb(24, 66, 24) ;        
+        letter-spacing: normal;
+        margin-top: 20px;
+
+}
+
+.col-md-4  {
+    color: white;
+}
+
+
+.container-fluid {
+display: flex;
+max-width: 1000px;
+opacity: .8;
+transition: opacity 0.3s ease;
+box-shadow: 2px 2px 4px rgb(24, 66, 24);
+border-radius: 15px;
+
+&:hover {
+    opacity:1
+}
+
+.img-fluid {
+    border-radius: 15px;
+}
+}
+
+
+}

@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+
+
+
+.titulos {
+    display: block;
+    font-family: $main-font;
+    color: $color-titulos;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgb(24, 66, 24) ;      
+    font-size: 40px;
+}
+
+.mb-4 {
+    @extend .titulos;
+}

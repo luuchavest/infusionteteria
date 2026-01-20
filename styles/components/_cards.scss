@@ -1,0 +1,167 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixins" as *;
+
+
+
+/*INICIO*/
+.bestsellers-inicio{
+    @include card-style (none, 15px); 
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    
+   
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/*NUESTROS SERVICIOS*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .card {
+        width: 100%; 
+        max-width: 350px;
+        height: 250px;
+        perspective: 1000px;
+        margin: 0 auto; 
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        &:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            @include flex-center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: $main-font;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .card-front {
+            background-color: $cards-color;
+            color: #fff;
+            border: 8px solid $cards-color;
+            transform: rotateY(0deg);
+        }
+
+        .card-back {
+            background-color: $cards-color2;
+            color: #fff;
+            border: 8px solid $cards-color2;
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+
+/*PRODUCTOS*/
+
+.card-producto {
+    @include card-style(#8db58d, 15px );
+    display: flex;
+    padding: 20px;
+    height: 100%; 
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+    transform: translateY(-7px);
+
+}
+    .imagen-producto {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    img {
+    border-radius: 12px;    
+    width: 100%;
+    height: auto;
+}
+
+}
+
+.productos {
+    font-size: 35px;
+    color: whitesmoke;
+    font-family: $main-font;
+}
+
+.nombre-producto {
+    @include estilo-texto ($main-font, 10px);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+
+.comprar {
+   background-color: #e9ecef; 
+    color: black;
+    border: 1px solid black;
+    padding: 8px;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+
+  &:hover {
+    background-color: rgb(215, 245, 173);
+
+  }
+    
+}
+
+
+}
+
+.titulo-productos {
+    font-family: $main-font;
+    color: azure;
+    font-weight: bolder;
+    font-size:40px ;
+}
+
+
+.container {
+    padding: 20px;
+   
+
+}
+

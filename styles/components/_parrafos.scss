@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+
+@mixin parrafos {
+    color: $parrafos-color;
+    font-family: $main-font;
+    font-size: 15px;
+    text-align: center;
+    text-shadow:2px 2px 4px rgb(4, 54, 4);
+}
+
+
+/*NOSOTROS*/
+.parrafo-historia{
+   @include parrafos();
+}
+
+
+/*INICIO*/
+.parrafo-inicio {
+    @include parrafos();
+
+
+}
+
+/*SERVICIOS*/
+
+.parrafo-servicios {
+    @include parrafos();
+    background: $bg-color;
+    border-radius: 15px;
+    margin: 60px;
+    padding: 10px;
+}

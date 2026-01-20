@@ -1,49 +1,57 @@
-.footer {
-    background-color: #9fc39f; 
-    padding: 20px 0 10px 0;    
-    color: #0e5b0e;            
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as * ;
+
+@mixin text-footer {
+    font-family: $main-font;
+    color: white;
+
+} 
+
+footer {
+    @include text-footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-color;
+    width: 100%;
+    padding: 20px 0 10px 0;              
     border-top: 1px solid rgba(14, 91, 14, 0.1);
     position: sticky;
-    
-}
-footer {
-    display: flex;
-    background-color: rgb(181, 246, 181);
-    width: 100%;
+    margin-top: auto;
 
-}
-
-.logo-footer {
-    font-family: 'Verdana', sans-serif;
+   .logo-footer {
     font-weight: bold;
     font-size: 18px;          
     margin: 0;
     line-height: 1;
-}
 
-.logo-footer span {
+
+     span {
     font-size: 8px;
     letter-spacing: 2px;
     display: block;
     font-weight: normal;
 }
+}
+
 
 .info-item {
+    @include text-footer;
     font-size: 12px;           
     margin: 0;
-    font-family: 'Verdana', sans-serif;
-}
 
-.info-item a {
-    color: #0e5b0e;
+    a {
+    color: #ffffff;
     text-decoration: none;
-}
 
-.info-item strong {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+    strong {
     font-weight: 700;
     margin-right: 5px;
 }
-
+}
 
 .footer-copyright {
     margin-top: 15px;
@@ -55,10 +63,5 @@ footer {
 }
 
 
-
-footer {
-    display: flex;
-    background-color: rgb(181, 246, 181);
-    width: 100%;
-
 }
+

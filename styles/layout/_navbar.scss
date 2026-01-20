@@ -1,3 +1,6 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
 
 .navbar-nav{
     display: flex;
@@ -7,17 +10,10 @@
     align-items: center;
     width: auto;
     margin-right:0;
-}
 
 
-.navbar-toggler {
-    padding: 0;
-    filter: invert(1); 
-}
-
-
-.nav-link {
-    background-color: #0e5b0e;
+    .nav-link {
+    background-color: $color3;
     color: white !important;
     white-space: nowrap;
     text-decoration: none;
@@ -27,8 +23,19 @@
     border-radius: 5px;
     text-align: center;
     display: inline-block;
-}
 
-.nav-link:hover {
+   &:hover {
     background-color: rgb(103, 213, 176);
 }
+}
+
+}
+
+.navbar-toggler {
+    padding: 0;
+    filter: invert(1); 
+}
+
+
+
+

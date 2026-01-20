@@ -1,94 +1,101 @@
+@use "../utilities/variables" as *;
+
+@use "../utilities/mixins" as *;
+
 .grid-container {
     display: grid;
-    justify-items: center;
-    width: 100%;
-}
-
-.bestsellers {
-    color: white;
-    text-transform: uppercase;
+    justify-content: center;
+    margin: 0 auto; 
+    padding: 10px;
+    gap: 10px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    margin: 20px 0;
+    grid-template:
+         "header" 70px
+         "nav" 60px
+         "main" auto
+         "footer" 70px;
+
+    
+.header { grid-area: header; background-color: transparent;}
+
+.nav { grid-area: nav;  background-color: transparent;}
+
+.main {grid-area: main;background-color: transparent;}
+
+
+.footer {grid-area: footer; background-color:transparent;}
+
 }
+ 
+
+
 
 .galeria-inicio {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px;
+    display: grid;  
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
     padding: 20px;
-    width: 90%;
-    max-width: 400px; 
-    aspect-ratio: 1/1;
-}
-
-.galeria-inicio a img {
     width: 100%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-    border-radius: 15px;
-    z-index: 10;
-}
-.galeria-inicio a {
+    aspect-ratio: auto;
+
+    a {
     display: block;
     width: 100%;
-    z-index: 10;
+
+    
+       img {
+       width: 100%;
+       aspect-ratio: 1 / 1; 
+       object-fit: cover;
+       border-radius: 15px;
+       display: block;
+       margin: 0 auto;
+       justify-items: center;
+    
 }
 
-@media (min-width: 768px) {
+}
 
-    .grid-container-inicio {
-       grid-template-columns: repeat(3, 1fr);
-        width: 100%;
+}
+
+.opinion {
+    padding: 100px 20px;
+    text-align: center;
+
+    .titulos {
+        font-family: $main-font;
+        color: $color-titulos;
+        margin-bottom: 50px;
+    }
+
+    .opinion-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax (300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        justify-content: center;
         margin: 0 auto;
     }
 
-
-    .galeria-inicio {
-        grid-template-columns: repeat(3, 1fr); 
-        max-width: 1200px; 
-        width: 100%;
-        gap: 30px;
-        aspect-ratio: auto; 
+    .opinion-card {
+        @include card-style ($cards-color, 15px);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgba(255,255,255,0.1);
+        max-width: 500px;
     }
 
-    .bestsellers {
-        font-size: 40px; 
-        margin: 50px 0;
+    .texto-opinion {
+        color: white;
+        font-family: $main-font;
+
     }
 
-.galeria-inicio img {
-    width: 100%; 
-    height: auto;
-    justify-items: center;
+    .autor {
+        color: white;
+        font-family: $main-font;
+    }
+
 }
-}
-
-/*SOBRE NOSOTROS*/
-
-.img-fluid {
-display: flex;
-width: 100px;
-opacity: .8;
-}
-
-
-.col-md-4  {
-    color: white;
-}
-
-.nosotros {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.historia {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    color: white;
-    font-size: 30px;
-}
-
 

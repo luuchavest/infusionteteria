@@ -1,5 +1,7 @@
-@use "base/reset";
 @use "utilities/variables";
+@use "base/reset";
+
+
 
 @use "layout/header";
 @use "layout/footer";
@@ -12,3 +14,4 @@
 @use "components/cards";
 @use "components/forms";
 @use "components/parrafos";
+@use "components/titulos";

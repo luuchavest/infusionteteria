@@ -1,0 +1,9 @@
+@use "../utilities/variables" as *;
+
+.productos {
+    font-family: $main-font;
+    color: $color-titulos; 
+    font-weight: bolder;
+    font-size:40px ;
+}
+
