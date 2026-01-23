@@ -677,7 +677,7 @@ a {
   padding: 10px;
 }
 
-.titulos, .mb-4 {
+.titulos, .faq-title, .mb-4 {
   display: block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
@@ -687,7 +687,11 @@ a {
   letter-spacing: 2px;
   width: 100%;
   text-shadow: 2px 2px 4px rgb(24, 66, 24);
-  font-size: 40px;
+  font-size: 25px;
+}
+
+.faq-subtitle {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
